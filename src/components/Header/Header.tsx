@@ -1,5 +1,4 @@
 import "./Header.scss";
-import { useState } from "react";
 import { PLANETS } from "../../constants/constants";
 import { useHomePageContext } from "../../hooks/useHomePageContext";
 import { useIsMobile } from "../../hooks/useIsMobile";
