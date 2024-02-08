@@ -1,0 +1,63 @@
+@use "./breakpoints" as *;
+
+@mixin text-h1 {
+  font-family: antonio, sans-serif;
+  font-size: 80px;
+  font-weight: 500;
+  line-height: 103px;
+}
+
+@mixin text-h2 {
+  font-family: antonio, sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -1.5px;
+}
+
+@mixin text-h3 {
+  font-family: Spartan, sans-serif;
+  font-weight: 700;
+  line-height: 25px;
+  font-size: 12px;
+  letter-spacing: 2.6px;
+}
+
+@mixin text-h4 {
+  font-family: Spartan, sans-serif;
+  font-weight: 700;
+  line-height: 25px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+@mixin text-body {
+  font-family: Spartan, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+@mixin for-phone-only {
+  @media screen and (max-width: $phone-breakpoint) {
+    @content;
+  }
+}
+
+@mixin for-tablet-only {
+  @media screen and (min-width: $phone-breakpoint) and (max-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin for-tablet-down {
+  @media screen and (max-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin for-desktop-only {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}

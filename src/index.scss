@@ -1,5 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Spartan:wght@400;700&display=swap");
+@import "./styles/colors";
+@import "./styles/animations";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: var(--dark-blue) url("./assets/svg/background-stars.svg");
+  padding-bottom: 10px;
+  min-width: 300px;
 }

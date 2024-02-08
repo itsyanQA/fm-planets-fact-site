@@ -1,0 +1,48 @@
+:root {
+  --white: #ffffff;
+  --dark-blue: #070724;
+  --planet-color: #000000;
+  --border-color: #38384f;
+
+  // Planets
+  --mercury: #419ebb;
+  --venus: #eda249;
+  --earth: #6d2ed5;
+  --mars: #d14c32;
+  --jupiter: #d83a34;
+  --saturn: #cd5120;
+  --uranus: #1ec1a2;
+  --neptune: #2d68f0;
+}
+
+body[data-planet="MERCURY"] {
+  --planet-color: #419EBB;
+}
+
+body[data-planet="VENUS"] {
+  --planet-color: #eda249;
+}
+
+body[data-planet="EARTH"] {
+  --planet-color: #6d2ed5;
+}
+
+body[data-planet="MARS"] {
+  --planet-color: #d14c32;
+}
+
+body[data-planet="JUPITER"] {
+  --planet-color: #d83a34;
+}
+
+body[data-planet="SATURN"] {
+  --planet-color: #cd5120;
+}
+
+body[data-planet="URANUS"] {
+  --planet-color: #1ec1a2;
+}
+
+body[data-planet="NEPTUNE"] {
+  --planet-color: #2d68f0;
+}
