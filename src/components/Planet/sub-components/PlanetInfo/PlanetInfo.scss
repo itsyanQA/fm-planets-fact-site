@@ -1,0 +1,77 @@
+@use "../../../../styles/mixins" as mixins;
+
+.planet-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  gap: 30px;
+
+  @include mixins.for-tablet-only {
+    flex-direction: row;
+    max-width: unset;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__typography-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include mixins.for-tablet-only {
+      max-width: 339px;
+    }
+
+    @include mixins.for-phone-only {
+      align-items: center;
+    }
+  }
+
+  &__title {
+    @include mixins.text-h1;
+    color: var(--white);
+
+    @include mixins.for-phone-only {
+      font-size: 40px;
+    }
+  }
+
+  &__content {
+    @include mixins.text-body;
+    filter: brightness(85%);
+    color: var(--white);
+    animation: fade-in 250ms ease-out;
+
+    @include mixins.for-phone-only {
+      text-align: center;
+    }
+  }
+
+  &__source {
+    @include mixins.text-body;
+    color: var(--white);
+    display: flex;
+    gap: 5px;
+    font-family: 400;
+    align-items: center;
+
+    & span {
+      filter: brightness(60%);
+    }
+
+    & a {
+      font-weight: bold;
+      &:is(:link, :visited) {
+        color: var(--white);
+        opacity: 50%;
+      }
+    }
+  }
+
+  &__wiki-and-icon {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+}

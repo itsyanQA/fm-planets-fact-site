@@ -1,0 +1,32 @@
+@use "../../../../styles/mixins" as mixins;
+
+.planet-info-chip {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+
+  @include mixins.for-tablet-only {
+    padding: 15px;
+  }
+
+  &__label {
+    @include mixins.text-h4;
+    text-transform: uppercase;
+    color: var(--white);
+    filter: brightness(70%);
+
+    @include mixins.for-tablet-only {
+      font-size: 8px;
+    }
+  }
+
+  &__description {
+    @include mixins.text-h2;
+    color: var(--white);
+
+    @include mixins.for-tablet-only {
+      font-size: 24px;
+    }
+  }
+}

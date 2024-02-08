@@ -1,0 +1,17 @@
+@use "../../../../styles/mixins" as mixins;
+
+.planet-info-chips {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  @include mixins.for-tablet-only {
+    gap: 10px;
+  }
+
+  @include mixins.for-phone-only {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

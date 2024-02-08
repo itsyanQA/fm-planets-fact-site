@@ -1,5 +1,5 @@
-import React from "react";
+import HomePage from "../../pages/HomePage";
 
 export function Layout() {
-  return <div>Layout</div>;
+  return <HomePage />;
 }

@@ -1,0 +1,25 @@
+@use "../../styles/mixins" as mixins;
+
+.planet {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  animation: fade-in 1000ms ease-out;
+  padding: 0 10%;
+  gap: 50px;
+
+  @include mixins.for-tablet-down {
+    padding-inline: 20px;
+  }
+
+  &__picture-and-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    @include mixins.for-tablet-down {
+      flex-direction: column;
+    }
+  }
+}

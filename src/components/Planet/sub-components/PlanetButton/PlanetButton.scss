@@ -1,0 +1,51 @@
+@use "../../../../styles/mixins" as mixins;
+
+.planet-button {
+  all: unset;
+  border: 1px solid #38384f;
+  padding: 17.5px 20px;
+  cursor: pointer;
+  transition: background-color 250ms ease-out;
+
+  @include mixins.for-phone-only {
+    border: none;
+    padding-bottom: 10px;
+    background-color: transparent;
+    padding: 20px 4px;
+  }
+
+  &--selected {
+    background-color: var(--planet-color);
+
+    @include mixins.for-phone-only {
+      background-color: transparent;
+      border-bottom: 4px solid var(--planet-color);
+    }
+  }
+
+  &__number-and-name {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__number,
+  &__name {
+    font-family: Spartan, sans-serif;
+    letter-spacing: 1.93px;
+    font-size: 9px;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+
+  &__number {
+    opacity: 50%;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &:hover:not(.planet-button--selected) {
+    background-color: #38384f;
+  }
+}

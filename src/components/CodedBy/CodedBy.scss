@@ -1,0 +1,16 @@
+.coded-by {
+  text-align: center;
+  margin: 25px 10px 10px 10px;
+  font-size: 14px;
+  color: var(--white);
+  font-family: Spartan, sans-serif;
+
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+    margin: 20px 0;
+  }
+
+  & a:link {
+    color: var(--earth);
+  }
+}

@@ -1,0 +1,29 @@
+@use "../../../../styles/mixins" as mixins;
+
+.planet-picture {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    @include mixins.for-phone-only {
+      width: 250px;
+    }
+  }
+
+  &__geology {
+    position: absolute;
+    height: 199px;
+    width: 163px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 83%;
+    animation: fade-in 250ms ease-out;
+
+    @include mixins.for-phone-only {
+      top: 70%;
+    }
+  }
+}

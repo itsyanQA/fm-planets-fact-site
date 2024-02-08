@@ -1,0 +1,104 @@
+@use "../../styles/mixins" as mixins;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 30px;
+  border-bottom: 1px solid var(--border-color);
+
+  @include mixins.for-tablet-only {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
+  @include mixins.for-phone-only {
+    padding: 25px 30px;
+  }
+
+  &__menu-icon {
+    & path {
+      transition: fill 250ms ease-out;
+    }
+
+    &--open path {
+      fill: var(--border-color);
+    }
+  }
+
+  &__nav {
+    @include mixins.for-phone-only {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-family: antonio, sans-serif;
+    font-size: 28px;
+    color: var(--white);
+  }
+
+  &__planets {
+    display: flex;
+    gap: 33px;
+  }
+
+  &__planet {
+    list-style-type: none;
+    color: var(--white);
+    cursor: pointer;
+    opacity: 75%;
+    transition: opacity 300ms ease-out;
+    padding-block: 30px;
+    position: relative;
+    @include mixins.text-h4;
+
+    &:hover {
+      opacity: 100%;
+
+      @include mixins.for-desktop-only {
+        &::before {
+          content: "";
+          border-top-width: 4px;
+          border-top-style: solid;
+          position: absolute;
+          display: block;
+          width: 100%;
+          top: 0;
+        }
+
+        &.header__planet--is-mercury::before {
+          border-top-color: var(--mercury);
+        }
+
+        &.header__planet--is-venus::before {
+          border-top-color: var(--venus);
+        }
+
+        &.header__planet--is-earth::before {
+          border-top-color: var(--earth);
+        }
+
+        &.header__planet--is-mars::before {
+          border-top-color: var(--mars);
+        }
+
+        &.header__planet--is-jupiter::before {
+          border-top-color: var(--jupiter);
+        }
+
+        &.header__planet--is-saturn::before {
+          border-top-color: var(--saturn);
+        }
+
+        &.header__planet--is-uranus::before {
+          border-top-color: var(--uranus);
+        }
+
+        &.header__planet--is-neptune::before {
+          border-top-color: var(--neptune);
+        }
+      }
+    }
+  }
+}
