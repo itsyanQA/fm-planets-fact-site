@@ -10,6 +10,13 @@
     padding: 15px;
   }
 
+  @include mixins.for-phone-only {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+  }
+
   &__label {
     @include mixins.text-h4;
     text-transform: uppercase;
@@ -27,6 +34,11 @@
 
     @include mixins.for-tablet-only {
       font-size: 24px;
+    }
+
+    @include mixins.for-phone-only {
+      font-size: 20px;
+      letter-spacing: -0.75px;
     }
   }
 }
