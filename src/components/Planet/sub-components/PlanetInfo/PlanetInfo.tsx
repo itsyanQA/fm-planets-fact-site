@@ -1,5 +1,5 @@
 import "./PlanetInfo.scss";
-import PLANET_DATA from "../../../../data/data";
+import PLANET_DATA from "../../../../data/data.json";
 import { useHomePageContext } from "../../../../hooks/useHomePageContext";
 import { PlanetDataContent, PlanetLayer } from "../../../../types/types";
 import SourceIcon from "../../../../../public/assets/svg/icon-source.svg?react";

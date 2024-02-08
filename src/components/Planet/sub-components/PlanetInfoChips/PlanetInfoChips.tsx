@@ -1,4 +1,4 @@
-import PLANET_DATA from "../../../../data/data";
+import PLANET_DATA from "../../../../data/data.json";
 import { useHomePageContext } from "../../../../hooks/useHomePageContext";
 import { PlanetDataContent } from "../../../../types/types";
 import { PlanetInfoChip } from "../PlanetInfoChip/PlanetInfoChip";
